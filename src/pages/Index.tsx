@@ -14,7 +14,7 @@ const Index = () => {
     setSpinning(true);
     const result: Spin = {
       color,
-      number: color === "green" ? null : randomNum(),
+      number: color === "green" ? 0 : randomNum(),
       id: Date.now() + Math.random(),
     };
     setTimeout(() => {
@@ -77,7 +77,7 @@ const Index = () => {
                   !spinning && i === 0 ? "ring-2 ring-primary ring-offset-2 ring-offset-card animate-pop" : ""
                 }`}
               >
-                {s.number ?? "G"}
+                {s.number}
               </div>
             ))}
             {!current && !spinning && (
@@ -90,41 +90,29 @@ const Index = () => {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0.5 h-full bg-primary/60 pointer-events-none" />
         </div>
 
-        {/* Color buttons */}
+        {/* Color info (not clickable) */}
         <div className="grid grid-cols-3 gap-3 mb-5">
-          <button
-            onClick={() => spin("red")}
-            disabled={spinning}
-            className="group relative bg-secondary/60 hover:bg-secondary border border-border hover:border-[hsl(8_88%_55%)] rounded-xl py-3 px-4 transition-all disabled:opacity-50"
-          >
+          <div className="bg-secondary/60 border border-border rounded-xl py-3 px-4">
             <div className="flex items-center justify-center gap-2">
               <span className="w-3 h-3 rounded-full bg-[hsl(8_88%_55%)]" />
               <span className="font-semibold">Red</span>
               <span className="text-muted-foreground text-sm">x2</span>
             </div>
-          </button>
-          <button
-            onClick={() => spin("black")}
-            disabled={spinning}
-            className="group relative bg-secondary/60 hover:bg-secondary border border-border hover:border-foreground/30 rounded-xl py-3 px-4 transition-all disabled:opacity-50"
-          >
+          </div>
+          <div className="bg-secondary/60 border border-border rounded-xl py-3 px-4">
             <div className="flex items-center justify-center gap-2">
               <span className="w-3 h-3 rounded-full bg-[hsl(222_30%_30%)] border border-foreground/20" />
               <span className="font-semibold">Black</span>
               <span className="text-muted-foreground text-sm">x2</span>
             </div>
-          </button>
-          <button
-            onClick={() => spin("green")}
-            disabled={spinning}
-            className="group relative bg-secondary/60 hover:bg-secondary border border-border hover:border-[hsl(152_70%_42%)] rounded-xl py-3 px-4 transition-all disabled:opacity-50"
-          >
+          </div>
+          <div className="bg-secondary/60 border border-border rounded-xl py-3 px-4">
             <div className="flex items-center justify-center gap-2">
               <span className="w-3 h-3 rounded-full bg-[hsl(152_70%_42%)]" />
               <span className="font-semibold">Green</span>
               <span className="text-muted-foreground text-sm">x14</span>
             </div>
-          </button>
+          </div>
         </div>
 
         {/* Spin button */}
