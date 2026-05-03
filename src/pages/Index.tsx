@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 type Color = "red" | "black" | "green";
 type Spin = { color: Color; number: number; id: number };
 
-const SPIN_MS = 6000;
+const SPIN_MS = 8000;
 const TILE_W = 96; // px (w-24)
 const REEL_LEN = 60;
 const WIN_INDEX = REEL_LEN - 8;
