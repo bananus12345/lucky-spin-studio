@@ -139,6 +139,11 @@ const Index = () => {
     }, SPIN_MS + 50);
   };
 
+  const spinRandom = () => {
+    if (spinning) return;
+    spin(randomColor());
+  };
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (!unlocked) return;
