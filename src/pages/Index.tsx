@@ -216,27 +216,24 @@ const Index = () => {
               className={`ball-red w-20 h-20 rounded-full text-white font-bold text-xl transition-transform ${
                 spinning ? "opacity-50 cursor-not-allowed" : "hover:scale-105 active:scale-95"
               }`}
-            >
-              R
-            </button>
+              aria-label="Red"
+            />
             <button
               disabled={spinning}
               onClick={() => spin("black")}
-              className={`ball-black w-20 h-20 rounded-full text-white font-bold text-xl transition-transform ${
+              className={`ball-black w-20 h-20 rounded-full transition-transform ${
                 spinning ? "opacity-50 cursor-not-allowed" : "hover:scale-105 active:scale-95"
               }`}
-            >
-              B
-            </button>
+              aria-label="Black"
+            />
             <button
               disabled={spinning}
               onClick={() => spin("green")}
-              className={`ball-green w-20 h-20 rounded-full text-white font-bold text-xl transition-transform ${
+              className={`ball-green w-20 h-20 rounded-full transition-transform ${
                 spinning ? "opacity-50 cursor-not-allowed" : "hover:scale-105 active:scale-95"
               }`}
-            >
-              G
-            </button>
+              aria-label="Green"
+            />
           </div>
         </div>
 
