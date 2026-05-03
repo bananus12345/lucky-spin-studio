@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 type Color = "red" | "black" | "green";
 type Spin = { color: Color; number: number; id: number };
 
-const SPIN_MS = 5000;
+const SPIN_MS = 6000;
 const TILE_W = 96; // px (w-24)
 const REEL_LEN = 60;
 const WIN_INDEX = REEL_LEN - 8;
@@ -181,7 +181,7 @@ const Index = () => {
               style={{
                 transform: `translateX(${-offset}px)`,
                 transition: spinning
-                  ? `transform ${SPIN_MS}ms cubic-bezier(0.16, 0.84, 0.25, 1)`
+                  ? `transform ${SPIN_MS}ms cubic-bezier(0.05, 0.7, 0.1, 1)`
                   : "none",
                 willChange: "transform",
               }}
