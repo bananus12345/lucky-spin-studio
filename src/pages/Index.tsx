@@ -215,7 +215,28 @@ const Index = () => {
 
         </div>
 
-        {/* Stats */}
+        {/* SPIN button */}
+        <div className="flex justify-center mt-6">
+          <button
+            onClick={spinRandom}
+            disabled={spinning}
+            className={`relative px-12 py-5 rounded-2xl font-extrabold text-3xl tracking-widest text-white transition-transform ${
+              spinning
+                ? "opacity-60 cursor-not-allowed"
+                : "hover:scale-105 active:scale-95"
+            }`}
+            style={{
+              background:
+                "linear-gradient(180deg, hsl(48 100% 60%), hsl(36 100% 45%))",
+              boxShadow:
+                "0 8px 0 hsl(28 90% 30%), 0 12px 24px hsl(36 100% 45% / 0.5), inset 0 2px 0 hsl(0 0% 100% / 0.5)",
+              textShadow: "0 2px 0 hsl(28 90% 25%), 0 0 12px hsl(48 100% 70%)",
+            }}
+          >
+            SPIN
+          </button>
+        </div>
+
         <div className="grid grid-cols-3 gap-4 mt-6">
           <div className="bg-card border border-border rounded-xl p-4 text-center">
             <div className="ball-red w-10 h-10 rounded-full mx-auto mb-2" />
