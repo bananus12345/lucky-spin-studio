@@ -181,7 +181,7 @@ const Index = () => {
               style={{
                 transform: `translateX(${-offset}px)`,
                 transition: spinning
-                  ? `transform ${SPIN_MS}ms cubic-bezier(0.16, 0.84, 0.25, 1)`
+                  ? `transform ${SPIN_MS}ms cubic-bezier(0.05, 0.7, 0.1, 1)`
                   : "none",
                 willChange: "transform",
               }}
