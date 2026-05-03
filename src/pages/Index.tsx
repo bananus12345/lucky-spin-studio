@@ -208,33 +208,6 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Buttons */}
-          <div className="flex justify-center gap-4 mt-6">
-            <button
-              disabled={spinning}
-              onClick={() => spin("red")}
-              className={`ball-red w-20 h-20 rounded-full transition-transform ${
-                spinning ? "opacity-50 cursor-not-allowed" : "hover:scale-105 active:scale-95"
-              }`}
-              aria-label="Red"
-            />
-            <button
-              disabled={spinning}
-              onClick={() => spin("black")}
-              className={`ball-black w-20 h-20 rounded-full transition-transform ${
-                spinning ? "opacity-50 cursor-not-allowed" : "hover:scale-105 active:scale-95"
-              }`}
-              aria-label="Black"
-            />
-            <button
-              disabled={spinning}
-              onClick={() => spin("green")}
-              className={`ball-green w-20 h-20 rounded-full transition-transform ${
-                spinning ? "opacity-50 cursor-not-allowed" : "hover:scale-105 active:scale-95"
-              }`}
-              aria-label="Green"
-            />
-          </div>
         </div>
 
         {/* Stats */}
