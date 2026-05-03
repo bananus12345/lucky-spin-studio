@@ -213,7 +213,7 @@ const Index = () => {
             <button
               disabled={spinning}
               onClick={() => spin("red")}
-              className={`ball-red w-20 h-20 rounded-full text-white font-bold text-xl transition-transform ${
+              className={`ball-red w-20 h-20 rounded-full transition-transform ${
                 spinning ? "opacity-50 cursor-not-allowed" : "hover:scale-105 active:scale-95"
               }`}
               aria-label="Red"
